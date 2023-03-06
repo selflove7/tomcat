@@ -32,6 +32,6 @@ MAINTAINER Selflove
 
 WORKDIR /usr/local/tomcat/webapps
 
-RUN curl -O -L //
+RUN curl -O -L https://github.com/selflove7/tomcat.git/sample.war
 
 CMD ["https://net.cloudinfrastructureservices.co.uk/usr/local/tomcat/bin/catalina.sh", "run"]
