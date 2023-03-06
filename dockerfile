@@ -18,11 +18,11 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.
 
 RUN cd /tmp 
 
-RUN apt-get -y unzip vim
+RUN apt-get -y install unzip 
 
 RUN unzip apache-tomcat-8.5.87.zip
 
-RUN cp -Rv /tmp/apache-tomcat-8.5.87.zip/* /usr/local/tomcat/
+RUN cp -Rv /tmp/apache-tomcat-8.5.87/* /usr/local/tomcat/
 
 EXPOSE 8080
 
