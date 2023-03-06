@@ -14,13 +14,13 @@ RUN apt-get -y install vim
 
 RUN mkdir /usr/local/tomcat
 
-RUN wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz -O /tmp/tomcat.tar.gz
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.zip -O /tmp/apache-tomcat-8.5.87.zip
 
 RUN cd /tmp 
 
-RUN tar -xvfz tomcat.tar.gz
+RUN tar -xvfz apache-tomcat-8.5.87.zip
 
-RUN cp -Rv /tmp/apache-tomcat-10.0.20/* /usr/local/tomcat/
+RUN cp -Rv /tmp/apache-tomcat-8.5.87.zip/* /usr/local/tomcat/
 
 EXPOSE 8080
 
