@@ -18,7 +18,9 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.
 
 RUN cd /tmp 
 
-RUN tar -xvfz apache-tomcat-8.5.87.zip
+RUN apt-get -y unzip vim
+
+RUN unzip apache-tomcat-8.5.87.zip
 
 RUN cp -Rv /tmp/apache-tomcat-8.5.87.zip/* /usr/local/tomcat/
 
