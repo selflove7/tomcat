@@ -12,13 +12,13 @@ RUN apt-get -y install curl
 
 RUN apt-get -y install vim
 
+RUN apt-get -y install unzip 
+
 RUN mkdir /usr/local/tomcat
 
 RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.zip -O /tmp/apache-tomcat-8.5.87.zip
 
 RUN cd /tmp 
-
-RUN apt-get -y install unzip 
 
 RUN unzip apache-tomcat-8.5.87.zip
 
