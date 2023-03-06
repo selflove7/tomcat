@@ -16,13 +16,11 @@ RUN apt-get -y install unzip
 
 RUN mkdir /usr/local/tomcat
 
-RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.zip -O /tmp/apache-tomcat-8.5.87.zip
-
-RUN cd /tmp 
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.zip 
 
 RUN unzip apache-tomcat-8.5.87.zip
 
-RUN cp -Rv /tmp/apache-tomcat-8.5.87/* /usr/local/tomcat/
+RUN cp -Rv /apache-tomcat-8.5.87/* /usr/local/tomcat/
 
 EXPOSE 8080
 
@@ -40,4 +38,4 @@ WORKDIR /usr/local/tomcat/webapps
 
 RUN curl -O -L https://github.com/selflove7/tomcat.git/sample.war
 
-CMD ["https://net.cloudinfrastructureservices.co.uk/usr/local/tomcat/bin/catalina.sh", "run"]
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
