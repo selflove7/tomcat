@@ -14,7 +14,7 @@ RUN apt-get -y install vim
 
 RUN mkdir /usr/local/tomcat
 
-RUN wget https://downloads.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz -O /tmp/tomcat.tar.gz
+RUN wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz -O /tmp/tomcat.tar.gz
 
 RUN cd /tmp 
 
